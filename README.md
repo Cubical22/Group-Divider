@@ -5,7 +5,9 @@ on this algorithm. so I decided to mke it myself.
 ## What's the purpose?
 well, the entire purpose of this algorythm is to seperate a number into different smaller peaces
 in a way that they all some up to the `goal` value. for example:
+    
     > Imagine the `goal` value being 10 and the `dividers` being '2 and 5'
+    
     > the result is, two success points:
         1. 2: 5 | 5: 0 (2 * 5 = 10)
         2. 2: 0 | 5: 2 (5 * 2 = 10)
@@ -25,6 +27,7 @@ there exists two (what I like to call them) 'states':
 > the fail state is used to keep track of how many times the sum of all values gets over the `goal` in a row.
 this is pretty important, cause if it failes once and then on the next loop it doesn't, then the `failStateCount` resets back to 0.
 This variable is used mainly to choose which multiplier we would like to increase by 1, and it is also used to stop the while loop after there are no more possibilities.
+
 > the success state just does the counting of all possiblities and printing all of them to the screen.
 
 on each loop, first thing checking the `failedStateCount` being less than the length of our dividers. next up adding one to a multiplier value, based on the `failedStateCount` variable. Hopefully you see what's going on under the hood. after that, we check ... if there is a success state or there is no state at all (meaning that the sum is less than our goal) we reset the `failedStateCount` back to 0.
