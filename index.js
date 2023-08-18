@@ -1,5 +1,5 @@
 const goal = 30;
-const dividers = [2,10];
+const dividers = [1,2,3];
 
 function divideByGroup(goal, dividers) {
     const multipliers = generateZeros(dividers.length);

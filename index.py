@@ -1,4 +1,4 @@
-goal = 10
+goal = 30
 dividers = (1,2,3)
 
 def divideByGroup(goal, dividers):

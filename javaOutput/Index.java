@@ -1,7 +1,5 @@
-import java.util.Arrays;
-
 public class Index {
-    final static int goal = 10;
+    final static int goal = 30;
     final static int[] dividers = new int[]{1,2,3};
 
     public static void main(String[] args) {
