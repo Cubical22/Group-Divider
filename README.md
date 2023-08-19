@@ -41,7 +41,7 @@ the algorithm is made in five different languages
 to use each version, perform as mentioned:
     
 python:
-    > On the `main` directory, run `python index.py` on the terminal
+> On the `main` directory, run `python index.py` on the terminal
 
 javascript:
 > Using `NodeJS`, on the `main` directory, run `node index.js` on the terminal
