@@ -35,6 +35,10 @@ and it is also used to stop the while loop after there are no more possibilities
 on each loop, the first thing is checking if the `failedStateCount` is less than the length of our dividers. next up adding one to a multiplier value, based on the `failedStateCount` variable. Hopefully, you see what's going on under the hood. after that, we check ... if there is a success state or there is no state at all (meaning that the sum is less than our goal) we reset the `failedStateCount` back to 0.
 one important thing to mention is that every time we add to the `failedStateCount` variable, meaning we move on to the next index, we also set all the values, including our currently working index (based on the `failedStateCount` variable) back into zero, and we do this before updating the `failedStateCount`. If we were to do it after, this would be excluding
 
+Have a look:
+
+![algo-image](https://github.com/Cubical22/Group-Divider/blob/main/Algorithm-Flowchart.png?raw=true)
+
 # Using this project
 the algorithm is made in five different languages
     python  java javascript C++ PHP
