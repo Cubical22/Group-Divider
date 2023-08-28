@@ -1,5 +1,5 @@
 ## The GroupDivider Algorithm
-This is a simple algorithm I made in 5 different programming languages.
+This is a simple algorithm I made in 6 different programming languages.
 I've looked up around the Internet and sadly have found no source code or anything
 on this algorithm. so I decided to make it myself.
 ## What's the purpose?
@@ -14,8 +14,11 @@ in a way that they all sum up to the `goal` value. for example:
 
 normally this would be an easy approach. Just make two nested for-loops to test every possibility.
 but this approach raises three problems:
-    1. what would be the limit of these loops.
+    
+    1. finding out the limit of this loops.
+    
     2. so many nested for loops at once. imagine making this for 10 dividers.
+    
     3. It's S L O W.
 
 this was my approach, solving all 3 problems at once:
@@ -40,25 +43,28 @@ Have a look:
 ![algo-image](https://github.com/Cubical22/Group-Divider/blob/main/Algorithm-Flowchart.png?raw=true)
 
 # Using this project
-the algorithm is made in five different languages
-    python  java javascript C++ PHP
+the algorithm is made in six different languages
+    python  java javascript C++ C# PHP
 to use each version, perform as mentioned:
     
-python:
+Python:
 > On the `main` directory, run `python index.py` on the terminal
 
-javascript:
+JavaScript:
 > Using `NodeJS`, on the `main` directory, run `node index.js` on the terminal
 
-java:
+Java:
 > On the `javaOutput` directory, you have two options:
     1. run `javac Index.java` and then `java Index` or ...
     2. use the cmd I have already set up for you. just run `run cmd` or `run.cmd`
     no difference
 
-c++:
+C++:
 > On the `Cpp` directory, assuming you have gcc and/or g++ installed (check by running `gcc --version` or `g++ --version` in cmd), you just simply run `g++ index.cpp`
 to compile the code. There is also a pre-compiled version on the directory, called `index.exe`. To use, just run `index.exe` in your terminal/command line
+
+C#:
+> On the `c#` directory, assuming you already have either a c# compiler or .Net installed on you local machine, run `dotnet run` to start the project, or use you prefered compiler as you wish
 
 PHP:
 > On the `php` directory, assuming you have php installed on your local machine, run `php index.php` and, that's all
