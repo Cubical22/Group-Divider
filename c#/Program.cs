@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GroupDivider
+﻿namespace GroupDivider
 {
     class GroupDivider {
         static void Main(String[] args) {
