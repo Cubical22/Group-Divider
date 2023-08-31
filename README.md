@@ -54,7 +54,7 @@ JavaScript:
 > Using `NodeJS`, on the `main` directory, run `node index.js` on the terminal
 
 Java:
-> On the `javaOutput` directory, you have two options:
+> On the `java` directory, you have two options:
     1. run `javac Index.java` and then `java Index` or ...
     2. use the cmd I have already set up for you. just run `run cmd` or `run.cmd`
     no difference
