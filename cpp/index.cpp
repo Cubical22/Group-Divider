@@ -1,31 +1,30 @@
 #include <iostream>
-#include <conio.h>
 using namespace std;
 
 int goal = 30;
-int dividers[3] = {1,2,3};
+int dividers[] = {1,2,3};
 const int length = sizeof(dividers)/sizeof(dividers[0]);
 
-int getOverallSum(int multipliers[]) {
+int getOverallSum(int *multipliers) {
     int overallSum = 0;
     for (int i = 0; i < length; i++) {
-        overallSum += multipliers[i] * dividers[i];
+        overallSum += *(multipliers + i) * dividers[i];
     }
 
     return overallSum;
 }
 
-void setFailedAndBelowToZero(int multipliers[], int failedStateCount) {
+void setFailedAndBelowToZero(int *multipliers, int failedStateCount) {
     for (int i = failedStateCount; i >= 0; i--) {
-        multipliers[i] = 0;
+        *(multipliers + i) = 0;
     }
 }
 
-void logSuccessCase(int multipliers[]) {
+void logSuccessCase(int *multipliers) {
     cout<<"success)";
 
     for (int i = 0; i < length; i++) {
-        cout<<" "<<dividers[i]<<": "<<multipliers[i]<<" |";
+        cout<<" "<<dividers[i]<<": "<<*(multipliers + i)<<" |";
     }
 
     cout<<"\n";
