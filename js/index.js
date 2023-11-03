@@ -16,11 +16,13 @@ function divideByGroup(goal, dividers) {
         multipliers[failedStateCount]++;
         const overallSum = calcSum(dividers, multipliers);
 
-        if (overallSum === goal) {
-            // the sum of all values add up to the goal
-            successCount++;
-            logSuccessState(dividers, multipliers);
-        } else if (overallSum > goal) {
+        if (overallSum >= goal) {
+            if (overallSum === goal) {
+                // the sum of all values add up to the goal
+                successCount++;
+                logSuccessState(dividers, multipliers);
+            }
+
             // a fail state happens
             resetAllNumbersBellowFailedStated(failedStateCount, multipliers);
             failedStateCount++;
