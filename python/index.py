@@ -15,11 +15,12 @@ def divideByGroup(goal, dividers):
         multipliers[failedStateCount] += 1
         overallSum = getOverallSum(dividers=dividers, multipliers=multipliers)
 
-        if overallSum == goal:
-            # success state happens
-            successCount+=1
-            logSuccess(dividers=dividers, multipliers=multipliers)
-        elif overallSum > goal:
+        if overallSum >= goal:
+            if overallSum == goal:
+                # success state happens
+                successCount+=1
+                logSuccess(dividers=dividers, multipliers=multipliers)
+
             # fail state happens
             resetAllBelowFailedState(failedStateCount, multipliers=multipliers)
             failedStateCount+=1

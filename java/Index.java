@@ -17,11 +17,13 @@ public class Index {
             multipliers[failedStateCount]++;
             int overallSum = getOverallSum(dividers, multipliers);
 
-            if (overallSum == goal) {
-                // the success state
-                successCount++;
-                logSuccessFulCases(dividers, multipliers);
-            } else if (overallSum > goal) {
+            if (overallSum >= goal) {
+                if (overallSum == goal) {
+                    // the success state
+                    successCount++;
+                    logSuccessFulCases(dividers, multipliers);
+                }
+                
                 // the fail state
                 setFailedStateAndBellowToZero(failedStateCount, multipliers);
                 failedStateCount++;

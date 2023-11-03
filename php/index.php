@@ -47,16 +47,19 @@ while (true) {
     $multipliers[$failedStateCount]++;
     $overallSum = getOverallSum($multipliers, $dividers);
 
-    if ($overallSum == $goal) {
-        // success state
-        $successCount++;
-        logSuccessCase($multipliers, $dividers);
-    } else if ($overallSum > $goal) {
+    if ($overallSum >= $goal) {
+        if ($overallSum == $goal) {
+            // success state
+            $successCount++;
+            logSuccessCase($multipliers, $dividers);
+        }
+
         // fail state
         $multipliers = setFailedAndBelowToZero($failedStateCount, $multipliers);
         $failedStateCount++;
         continue;
     }
+
     $failedStateCount = 0;
 }
 
