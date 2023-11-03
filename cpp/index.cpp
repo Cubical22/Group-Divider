@@ -51,11 +51,13 @@ int main() {
         multipliers[failedStateCount]++;
         int overallSum = getOverallSum(multipliers);
 
-        if (overallSum == goal) {
-            // sucess state happens here
-            successCount++;
-            logSuccessCase(multipliers);
-        } else if (overallSum > goal) {
+        if (overallSum >= goal) {
+            if (overallSum == goal) {
+                // sucess state happens here
+                successCount++;
+                logSuccessCase(multipliers);
+            }
+            
             // failed state happens here
             setFailedAndBelowToZero(multipliers, failedStateCount);
             failedStateCount++;
