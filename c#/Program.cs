@@ -18,11 +18,13 @@
                 multipliers[failedStateCount]++;
                 int overallSum = GetOverallSum(dividers, multipliers);
 
-                if (overallSum == goal) {
-                    // the success case
-                    successCases++;
-                    logSuccess(dividers, multipliers);
-                } else if (overallSum > goal) {
+                if (overallSum >= goal) {
+                    if (overallSum == goal) {
+                        // the success case
+                        successCases++;
+                        logSuccess(dividers, multipliers);
+                    }
+                    
                     // the failed case
                     for (int i = failedStateCount; i >= 0; i--) {
                         multipliers[i] = 0;
